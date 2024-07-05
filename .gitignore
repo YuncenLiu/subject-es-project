@@ -1,0 +1,4 @@
+/.idea/
+.DS_Store
+target/
+src/main/.DS_Store
