@@ -42,6 +42,16 @@ public class PositionController {
     public  List<Map<String,Object>>  searchSubject(@PathVariable("keyword") String  keyword,@PathVariable("pageNo")int pageNo,
                                                      @PathVariable("pageSize")int  pageSize)throws  IOException{
         List<Map<String,Object>> list = service.searchSubject(keyword, pageNo, pageSize);
+        list.stream()
+                .forEach(map -> {
+                    if (map.containsKey("sub_title")) {
+                        Object value = map.get("sub_title");
+                        if (value instanceof String) {
+                            String replacedValue = ((String) value).replace("\\n", "");
+                            map.put("sub_title", replacedValue);
+                        }
+                    }
+                });
         return  list;
     }
 

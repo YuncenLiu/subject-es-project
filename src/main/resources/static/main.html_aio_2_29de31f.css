@@ -27,7 +27,7 @@
 }
 
 #main_container .content_left {
-    width: 960px;
+    width: 1150px;
     float: left
 }
 
@@ -2338,15 +2338,16 @@ ul.order .wrapper .item.page .page-number .curNum {
     margin-top: 18px
 }
 
+/* 每个单元格的高度 */
 .s_position_list .list_item_top {
-    width: 928px;
-    height: 68px;
+    width: 1150px;
+    height: 150px;
     padding: 14px 15px 0
 }
 
 .s_position_list .list_item_top .position {
     float: left;
-    width: 528px;
+    width: 758px;
     margin-right: 20px
 }
 
@@ -2396,9 +2397,6 @@ ul.order .wrapper .item.page .page-number .curNum {
 .s_position_list .list_item_top .position .p_bot .li_b_l {
     font-size: 14px;
     color: #555;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     word-wrap: normal
 }
 
@@ -2429,7 +2427,7 @@ ul.order .wrapper .item.page .page-number .curNum {
 
 .s_position_list .list_item_top .company .company_name a {
     display: inline-block;
-    max-width: 180px;
+    max-width: 500px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
