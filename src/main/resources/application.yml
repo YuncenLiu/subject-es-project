@@ -1,0 +1,25 @@
+spring:
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+      additional-paths: src/main/java #重启目录
+      exclude: WEB-INF/**
+    freemarker:
+      cache: false    #页面不加载缓存，修改即时生效
+  thymeleaf:
+    suffix: .html
+    prefix: file:src/main/resources/templates/
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+  elasticsearch:
+    rest:
+      uris: 192.168.58.175:9200,192.168.58.175:9201,192.168.58.175:9202
+server:
+  port: 8083
+
+logging:
+  level:
+    root: info
+    com.xdclass.search: debug
