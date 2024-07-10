@@ -16,6 +16,10 @@ spring:
   elasticsearch:
     rest:
       uris: 192.168.58.175:9200,192.168.58.175:9201,192.168.58.175:9202
+  datasource:
+    url: jdbc:mysql://39.105.177.10:3388/cloud?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: cloud
+    password: cloud
 server:
   port: 8083
 

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href=./css/layout_8a42639.css>
+    <link rel="stylesheet" href=./css/main.html_aio_2_29de31f.css>
+    <link rel="stylesheet" href=./css/main.html_aio_16da111.css>
+    <link rel="stylesheet" href=./css/widgets_03f0f0e.css>
+    <link rel="stylesheet" href=./css/mCustomScrollbar_ac2fb8b.css>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="top_bannerC">
+    <a rel="nofollow" href="https://zhuanti.lagou.com/qiuzhaozhc.html"
+       style="background: url(https://www.lgstatic.com/i/image/M00/3C/48/CgqCHl8nkiOAOihGAAC5a9EQ2rU358.PNG) center center no-repeat"
+       target="_blank" data-lg-tj-id="bd00" data-lg-tj-no="idnull" data-lg-tj-cid="11127" class=""></a>
+</div>
+
+<div id="lg_header" >
+    <!-- 页面主体START -->
+    <div id="content-container">
+
+        <div class="search-wrapper" style="height: 180px;">
+            <div id="searchBar" class="search-bar" style="padding-top: 30px;">
+                <div class="tab-wrapper" style="display: block;">
+                    <a id="tab_pos" class="active" rel="nofollow" href="javascript:">题库搜索 ( <span>500+</span> ) </a>
+                </div>
+                <div class="input-wrapper" data-lg-tj-track-code="search_search" data-lg-tj-track-type="1">
+                    <div class="keyword-wrapper">
+                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input
+                            type="text" id="keyword" v-model="keyword" autocomplete="off" maxlength="64" placeholder="搜索关键词"
+                            value="java" class="ui-autocomplete-input"   @keyup.enter="searchPosition">
+                    </div>
+                    <input type="button" id="submit"  value="搜索" @click="searchPosition">
+                </div>
+            </div>
+        </div>
+
+        <!-- 搜索输入框模块 -->
+        <div id="main_container">
+            <!-- 左侧 -->
+            <div class="content_left">
+                <div class="s_position_list " id="s_position_list">
+                    <ul class="item_con_list" style="display: block;">
+                        <li class="con_list_item default_list"  v-for="element in results">
+                            <span class="top_icon direct_recruitment"></span>
+                            <div class="list_item_top">
+                                <div class="position">
+                                    <div class="p_top">
+                                        <h3 style="max-width: 180px;">{{element.sub_no}}</h3>
+                                    </div>
+                                    <div class="p_bot">
+                                        <div class="li_b_l" >
+                                            {{element.sub_title}}
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="company">
+                                    <div class="company_name">
+                                        <a href="#" target="_blank">{{element.sub_tag}}</a>
+                                    </div>
+                                    <div class="industry">
+                                        {{element.sub_info}}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    new Vue({
+        el: "#lg_header",
+        data: {
+            keyword: "",
+            results: [
+                {
+                    "sub_ref": "商业秘密（Business Secret），按照《中华人民共和国反不正当竞争法》的规定，是指不为公众所知悉、能为权利人带来经济利益，具有实用性并经权利人采取保密措施的技术信息和经营信息。因此商业秘密包括两部分：技术信息和经营信息。如管理方法，产销策略，客户名单、货源情报等经营信息；生产配方、工艺流程、技术诀窍、设计图纸等技术信息。",
+                    "sub_title": "利用（  ）可以保护软件的技术信息和经营信息。",
+                    "@timestamp": "2024-07-05T03:44:00.545Z",
+                    "@version": "1",
+                    "sub_info": "本题共被作答9534次 正确率72%",
+                    "id": 179,
+                    "sub_no": "第2题（单选题）",
+                    "paper_id": 8,
+                    "sub_tag": "知识产权与标准化>保护范围与对象"
+                },
+                {
+                    "sub_ref": "安全性(security）是指系统在向合法用户提供服务的同时能够阻止非授权用户使用的企图或拒绝服务的能力。机密性是指网络信息不泄露给非授权的用户、实体或程序，能够防止非授权者获取信息；完整性是指网络信息或系统未经授权不能进行更改的特性；可用性是指合法许可的用户能够及时获取网络信息或服务的特性；可控性是指可以控制授权范围内的信息流向及其行为方式；可审查性是指对出现的信息安全问题提供调查的依据和手段。",
+                    "sub_title": "信息安全包括5个基本要素，其中（）是指对出现的信息安全问题提供调查的依据和手段；（）是指网络信息不泄露给非授权的用户、实体或程序，能够防止非授权者获取信息。",
+                    "@timestamp": "2024-07-05T03:44:00.554Z",
+                    "@version": "1",
+                    "sub_info": "本题共被作答1451次 正确率88%",
+                    "id": 304,
+                    "sub_no": "第15题（单选题）",
+                    "paper_id": 16,
+                    "sub_tag": "系统安全分析与设计>其它"
+                },
+                {
+                    "sub_ref": "本题考查信息化（信息安全）方面的基础知识。\n业务流分析属于信息安全威胁的一种。它通过对系统进行长期监听，利用统计分析方法诸如通信频度、通信的信息流向、通信总量的变化等参数进行研究，从中发现有价值的信息规律。",
+                    "sub_title": "信息安全的威胁有多种，其中（  ）是指通过对系统进行长期监听，利用统计分析方法对诸如通信频度、通信的信息流向、通信总量的变化等参数进行研究，从中发现有价值的信息和规律。",
+                    "@timestamp": "2024-07-05T03:44:00.553Z",
+                    "@version": "1",
+                    "sub_info": "本题共被作答8464次 正确率78%",
+                    "id": 291,
+                    "sub_no": "第2题（单选题）",
+                    "paper_id": 16,
+                    "sub_tag": "系统安全分析与设计>其它"
+                },
+                {
+                    "sub_ref": "本题考查信息化（信息安全）方面的基础知识。\n业务流分析属于信息安全威胁的一种。它通过对系统进行长期监听，利用统计分析方法诸如通信频度、通信的信息流向、通信总量的变化等参数进行研究，从中发现有价值的信息规律。",
+                    "sub_title": "信息安全的威胁有多种，其中（  ）是指通过对系统进行长期监听，利用统计分析方法对诸如通信频度、通信的信息流向、通信总量的变化等参数进行研究，从中发现有价值的信息和规律。",
+                    "@timestamp": "2024-07-05T03:44:00.570Z",
+                    "@version": "1",
+                    "sub_info": "本题共被作答8464次 正确率78%",
+                    "id": 511,
+                    "sub_no": "第5题（单选题）",
+                    "paper_id": 34,
+                    "sub_tag": "系统安全分析与设计>其它"
+                },
+                {
+                    "sub_ref": "本题考查面向对象分析与设计的基础知识。\n状态图描述了一个对象在其生命周期中可能的状态组合；顺序图用来描述对象按照时间顺序的消息流来建模用例；数据流图是一种描述数据通过系统的流程以及系统实施的工作或处理过程的过程模型；流程图以图形化的方式展示应用程序从数据输入开始到获得输出为止的逻辑过程。",
+                    "sub_title": "在面向对象方法中，信息流是通过向参与者或内部对象发送消息形成的。（  ）用于描述进出系统的信息流。",
+                    "@timestamp": "2024-07-05T03:44:00.550Z",
+                    "@version": "1",
+                    "sub_info": "本题共被作答8324次 正确率44%",
+                    "id": 240,
+                    "sub_no": "第2题（单选题）",
+                    "paper_id": 13,
+                    "sub_tag": "需求工程>面向对象基本概念"
+                },
+                {
+                    "sub_ref": "用于管理信息系统规划的方法很多，主要是关键成功因素法（Critical Success Factors，CSF）、战略目标集转化法（Strategy Set Transformation, ，SST）和企业系统规划法（Business System Planning, ，BSP）。其他还有企业信息分析与集成技术（BIAIT）、产出/方法分析（E/MA）、投资回收法（ROI）、征费法（chargout）、零线预算法、阶石法等。用得最多的是前面三种。\n1. 关键成功因素法（CSF）\n在现行系统中，总存在着多个变量影响系统目标的实现，其中若干个因素是关键的和主要的（即关键成功因素）。通过对关键成功因素的识别，找出实现目标所需的关键信息集合，从而确定系统开发的优先次序。\n关键成功因素来自于组织的目标，通过组织的目标分解和关键成功因素识别、性能指标识别，一直到产生数据字典。\n识别关键成功因素，就是要识别联系于组织目标的主要数据类型及其关系。不同的组织的关键成功因素不同，不同时期关键成功因素也不相同。当在一个时期内的关键成功因素解决后，新的识别关键成功因素又开始。\n关键成功因素法能抓住主要矛盾，使目标的识别突出重点。由于经理们比较熟悉这种方法，所以能够使用这种方法确定目标，因而经理们乐于努力去实现。该方法最有利于确定企业的管理目标。\n2.战略目标集转化法（SST）\n把整个战略目标看成是一个“信息集合”，由使命、目标、战略等组成，管理信息系统的规划过程即是把组织的战略目标转变成为管理信息系统的战略目标的过程。\n战略目标集转化法从另一个角度识别管理目标，它反映了各种人的要求，而且给出了按这种要求的分层，然后转化为信息系统目标的结构化方法。它能保证目标比较全面，疏漏较少，但它在突出重点方面不如关键成功因素法。\n3. 企业系统规划法（BSP）\n信息支持企业运行。通过自上而下地识别企业目标、企业过程和数据，然后对数据进行分析，自下而上地设计信息系统。该管理信息系统支持企业目标的实现，表达所有管理层次的要求，向企业提供一致性信息，对组织机构的变动具有适应性。\n企业系统规划法虽然也首先强调目标，但它没有明显的目标导引过程。它通过识别企业“过程”引出了系统目标，企业目标到系统目标的转化是通过企业过程/数据类等矩阵的分析得到的。",
+                    "sub_title": "用于管理信息系统规划的方法有很多，其中（  ）将整个过程看成是一个“信息集合”，并将组织的战略目标转变为管理信息系统的战略目标。（  ）通过自上而下地识别企业目标、企业过程和数据，然后对数据进行分析，自下而上地设计信息系统。",
+                    "@timestamp": "2024-07-05T03:44:00.565Z",
+                    "@version": "1",
+                    "sub_info": "本题共被作答7543次 正确率75%",
+                    "id": 454,
+                    "sub_no": "第2题（单选题）",
+                    "paper_id": 28,
+                    "sub_tag": "企业信息化战略与实施>信息系统战略规划"
+                },
+                {
+                    "sub_ref": "吞吐量指一个业务系统在单位时间内提供的产量（或服务量）。",
+                    "sub_title": "信息系统的性能评价指标是客观评价信息系统性能的依据，其中，（ ）是指系统在单位时间内处理请求的数量。",
+                    "@timestamp": "2024-07-05T03:44:00.557Z",
+                    "@version": "1",
+                    "sub_info": "本题共被作答13153次 正确率91%",
+                    "id": 337,
+                    "sub_no": "第14题（单选题）",
+                    "paper_id": 19,
+                    "sub_tag": "计算机系统基础>系统配置与性能评价>性能指标"
+                },
+                {
+                    "sub_ref": "逆向工程导出的信息可分为如下4个抽象层次。\n① 实现级：包括程序的抽象语法树、符号表等信息。\n② 结构级：包括反映程序分量之间相互依赖关系的信息，例如调用图、结构图等。本题第一空描述的是结构级，选择B选项。\n③ 功能级：包括反映程序段功能及程序段之间关系的信息。本题第二空描述的是功能级，选择C选项。\n④ 领域级：包括反映程序分量或程序诸实体与应用领域概念之间对应关系的信息。",
+                    "sub_title": "软件逆向工程就是分析已有的程序，寻求比源代码更高级的抽象表现形式。在逆向工程导出信息的四个抽象层次中，（  ）包括反映程序分量部分之间相互依赖关系的信息； （  ）包括反映程序段功能及程序段之间关系的信息。",
+                    "@timestamp": "2024-07-05T03:44:00.566Z",
+                    "@version": "1",
+                    "sub_info": "本题共被作答16245次 正确率67%",
+                    "id": 470,
+                    "sub_no": "第6题（单选题）",
+                    "paper_id": 30,
+                    "sub_tag": "软件工程>逆向工程"
+                },
+                {
+                    "sub_ref": "并发用户数：在同一时段与服务器进行了交互的在线用户数量。\n吞吐率：吞吐率原指一个业务系统在单位时间内提供的产量（或服务量）。在计算机或数据通信系统，指的是单位时间内通过某通信信道（a communication channel）或某个节点成功交付数据的平均速率。\n系统响应时间：是计算机对用户的输入或请求做出反应的时间。\n资源利用率：即在给定的时间区间中，各种部件（包括硬件设备和软件系统）被使用的时间与整个时间之比。\n根据以上描述知，与题干定义最符合的是资源利用率，故选D。",
+                    "sub_title": "信息系统的性能评价指标是客观评价信息系统性能的依据，其中，（）是指在给定的时间区间，各种部件被使用的时间与整个时间之比。",
+                    "@timestamp": "2024-07-05T03:44:00.535Z",
+                    "@version": "1",
+                    "sub_info": "本题共被作答3395次 正确率80%",
+                    "id": 67,
+                    "sub_no": "第22题（单选题）",
+                    "paper_id": 2,
+                    "sub_tag": "计算机系统基础>系统配置与性能评价>性能指标"
+                },
+                {
+                    "sub_ref": "本题考查应用数学（量化管理）基础知识。\n评价信息系统经济效益常用的方法主要有成本效益分析法、投入产出分析法和价值工程方法。盈亏平衡法常用于商品的销售定价。",
+                    "sub_title": "评价信息系统经济效益的方法不包括（  ）。",
+                    "@timestamp": "2024-07-05T03:44:00.548Z",
+                    "@version": "1",
+                    "sub_info": "本题共被作答7763次 正确率47%",
+                    "id": 223,
+                    "sub_no": "第1题（单选题）",
+                    "paper_id": 11,
+                    "sub_tag": "系统规划>成本效益分析"
+                }
+            ]
+        },
+        methods: {
+            searchPosition(){
+                var keyword = this.keyword;
+                axios.get('http://localhost:8083/searchSubject/'+ keyword + '/1/10').then(response =>{
+                    this.results = response.data;
+                    console.log(response.data);
+                });
+            }
+        }
+    });
+</script>
+
+</html>
